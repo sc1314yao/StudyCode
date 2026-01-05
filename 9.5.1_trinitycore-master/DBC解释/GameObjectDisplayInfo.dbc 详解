@@ -1,0 +1,17 @@
+包含所有类型的模型信息，模型一般是.MDX文件
+
+列	字段	详细说明
+1	显示编号	
+2	文件名	
+3	正常	参考SoundEntries.dbc
+4	打开	参考SoundEntries.dbc
+5	掉落	参考SoundEntries.dbc
+6	关闭	参考SoundEntries.dbc
+7	摧毁	参考SoundEntries.dbc
+8	已打开	参考SoundEntries.dbc
+9	自定义0	参考SoundEntries.dbc
+10	自定义1	参考SoundEntries.dbc
+11	自定义2	参考SoundEntries.dbc
+12	自定义3	参考SoundEntries.dbc
+13-18	模型盒数据	绑定的模型盒数据
+19	目标特效包	参考ObjectEffectPackage.dbc，只用在冰冠堡垒的飞艇上面

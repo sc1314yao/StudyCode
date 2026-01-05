@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CameraConfig version="1.0">
+    <CameraI type="home" id="5">
+        <IpAddress>178.26.85.83</IpAddress>
+        <SubnetMask>123.45.67.89</SubnetMask>
+        <ExposureAuto>false</ExposureAuto>
+        <ExposureTime>200</ExposureTime>
+        <TriggerMode>false</TriggerMode>
+        <Price>9.9</Price>
+    </CameraI>
+    <CameraI type="hotel" id="6">
+        <IpAddress>111.26.85.8</IpAddress>
+        <SubnetMask>111.26.85.255</SubnetMask>
+        <ExposureAuto>true</ExposureAuto>
+        <ExposureTime>2</ExposureTime>
+        <TriggerMode>false</TriggerMode>
+        <!--add price-->
+        <Price>100.00</Price>
+    </CameraI>
+    <CameraII>
+        <DevID>8</DevID>
+        <IpAddress>2.26.85.83</IpAddress>
+        <SubnetMask>123.45.67.89</SubnetMask>
+        <ExposureAuto>false</ExposureAuto>
+        <ExposureTime>400</ExposureTime>
+        <TriggerMode>false</TriggerMode>
+    </CameraII>
+</CameraConfig>

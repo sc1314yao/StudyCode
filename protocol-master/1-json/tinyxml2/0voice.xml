@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Users>
+    <User Name="milo" Password="pwd">
+        <Gender>man</Gender>
+        <Age>10000</Age>
+        <Mobile>186****3143</Mobile>
+        <Email>472251823@qq.com</Email>
+        <Gender>2-woman1-man</Gender>
+        <Mobile>18670368134186****3143</Mobile>
+        <Email>472251823@qq.com</Email>
+        <Gender>2-woman1-man</Gender>
+        <Mobile>18670368134186****3143</Mobile>
+        <Email>472251823@qq.com</Email>
+        <Gender>2-woman1-man</Gender>
+        <Mobile>18670368134186****3143</Mobile>
+        <Email>472251823@qq.com</Email>
+    </User>
+    <User Name="king" Password="pwd2">
+        <Mobile>186****8888</Mobile>
+    </User>
+    <User Name="king" Password="pwd2">
+        <Mobile>186****8888</Mobile>
+    </User>
+    <User Name="king" Password="pwd2">
+        <Mobile>186****8888</Mobile>
+    </User>
+    <User Name="king" Password="pwd2 
+    <User Name="king" Password="pwd2">
+         
+</Users>

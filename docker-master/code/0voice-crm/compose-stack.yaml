@@ -1,0 +1,83 @@
+version: "3.8"
+services:
+  gateway:
+    image: 192.168.239.142:5000/0voice-gateway:v1.0.0
+    container_name: "0voice-gateway"
+    ports:
+      - "8083:8081"
+    entrypoint: ./0voiceGateway
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8081/api/health" ]
+      interval: 3s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    networks:
+      - 0voice
+    configs:
+      - source: gateway-conf
+        target: /app/config.yaml
+    deploy:
+      mode: replicated
+      replicas: 5
+      endpoint_mode: vip
+      resources:
+        limits:
+          cpus: '0.3'
+          memory: '500MB'
+        reservations:
+          cpus: '0.1'
+          memory: '50MB'
+      update_config:
+        parallelism: 2
+        order: start-first
+        monitor: '10s'
+      rollback_config:
+        parallelism: 2
+        order: start-first
+        monitor: '10s'
+  goods:
+    image: 192.168.239.142:5000/0voice-goods:v1.0.0
+    container_name: 0voice-goods
+    entrypoint: ./goods
+    healthcheck:
+      test: [ "CMD", "grpc_health_probe", "--addr", "localhost:50051" ]
+      interval: 3s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    networks:
+      - 0voice
+    configs:
+      - source: goods-conf
+        target: /app/config.yaml
+    deploy:
+      mode: global
+      endpoint_mode: dnsrr
+      resources:
+        limits:
+          cpus: '0.3'
+          memory: '500MB'
+        reservations:
+          cpus: '0.1'
+          memory: '50MB'
+      update_config:
+        parallelism: 2
+        order: start-first
+        monitor: '10s'
+      rollback_config:
+        parallelism: 2
+        order: start-first
+networks:
+  0voice:
+    driver: overlay
+    driver_opts:
+      com.docker.network.bridge.name: 0voice-stack-overlay
+    ipam:
+      config:
+        - subnet: 10.18.0.0/16
+configs:
+  gateway-conf:
+    file: 0voiceGateway/config.yaml
+  goods-conf:
+    file: Goods/config.yaml

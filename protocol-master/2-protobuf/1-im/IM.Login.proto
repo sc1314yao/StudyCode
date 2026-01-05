@@ -1,0 +1,39 @@
+syntax = "proto3"; // proto2和proto3
+package IM.Login;	//IM::Login -> package IM.Login
+import "IM.BaseDefine.proto";	// 引用文件
+
+option optimize_for = LITE_RUNTIME;
+
+message IMLoginReq{
+	//cmd id:		0x0103
+	string user_name = 1;
+	string password = 2;
+	IM.BaseDefine.UserStatType online_status = 3;
+	IM.BaseDefine.ClientType client_type = 4; //删掉，4不能再去用
+	string client_version = 5;
+	string client_xxx = 6;
+
+	// oneof 可以理解为c++ union联合
+	oneof test_union {
+		int32 int32_1 = 7;
+		string string_2 =8;
+	}
+
+	oneof payload {
+        ArticleResponse articleResponse = 9;
+        MusicResponse musicResponse = 10;
+    }
+}
+
+// 
+message ArticleResponse {
+    string title = 1;
+    string author = 2;
+    string date = 3;
+}
+ 
+message MusicResponse {
+    string title = 1;
+    string author = 2;
+    bytes data = 3;
+}

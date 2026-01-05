@@ -1,0 +1,35 @@
+
+交通工具
+
+列	字段	详细说明
+1	编号	
+2	标识	
+3	转速	
+4	俯冲速度	
+5	最小俯冲速度	
+6	最大俯冲速度	
+7-14	座位编号	
+15	鼠标偏移距	
+16	相机最小衰减距离尺寸	
+17	相机最大衰减距离尺寸	
+18	相机俯冲偏移	
+19	右方面向限制	
+20	左方面向限制	
+21	msslTrgtTurnLingering	这些（含以下）实在不知道是什么意思，所以没翻译
+22	msslTrgtPitchLingering	
+23	msslTrgtMouseLingering	
+24	msslTrgtEndOpacity	
+25	msslTrgtArcSpeed	
+26	msslTrgtArcRepeat	
+27	msslTrgtArcWidth	
+28-29	msslTrgtImpactRadius	
+30	msslTrgtArcTexture	
+31	msslTrgtImpactTexture	
+32-33	msslTrgtImpactModel	
+34	相机横摆偏移	
+35	用户界面运动类型	
+36	msslTrgtImpactTexRadius	
+37	用户界面位置指示器类型	
+38	能量显示编号	
+39		
+40		

@@ -1,0 +1,44 @@
+version: "3.8"
+services:
+  gateway:
+    build:
+      context: ./0voiceGateway
+      dockerfile: Dockerfile
+    container_name: "0voice-gateway"
+    ports:
+      - "8082:8081"
+    entrypoint: ./0voiceGateway
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8081/api/health" ]
+      interval: 3s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    networks:
+      - 0voice
+  goods:
+    build:
+      context: ./Goods
+      dockerfile: Dockerfile
+    container_name: 0voice-goods
+    entrypoint: ./goods
+    healthcheck:
+      test: [ "CMD", "grpc_health_probe", "--addr", "localhost:50051" ]
+      interval: 3s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    networks:
+      - 0voice
+networks:
+  0voice:
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: 0voice
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16
+          gateway: 172.18.0.1
+          aux_addresses:
+            h1: "172.18.0.2"
+            h2: "172.18.0.3"

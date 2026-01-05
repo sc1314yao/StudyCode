@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CameraI type="home" price="1000" wifi="true">
+    <DevID>4</DevID>
+    <IpAddress>139.66.38.13</IpAddress>
+    <SubnetMask>255.0.0.0</SubnetMask>
+    <ExposureAuto>false</ExposureAuto>
+    <ExposureTime>80</ExposureTime>
+    <TriggerMode>false</TriggerMode>
+</CameraI>
+
+<CameraII>
+    <DevID>4</DevID>
+    <IpAddress>139.66.38.13</IpAddress>
+    <SubnetMask>255.0.0.0</SubnetMask>
+    <ExposureAuto>false</ExposureAuto>
+    <ExposureTime>80</ExposureTime>
+    <TriggerMode>false</TriggerMode>
+</CameraII>
+
+<CameraIII>
+    <DevID>4</DevID>
+    <IpAddress>139.66.38.13</IpAddress>
+    <SubnetMask>255.0.0.0</SubnetMask>
+    <ExposureAuto>false</ExposureAuto>
+    <ExposureTime>80</ExposureTime>
+    <TriggerMode>false</TriggerMode>
+</CameraIII>
