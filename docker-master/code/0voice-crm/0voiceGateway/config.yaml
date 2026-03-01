@@ -1,9 +1,0 @@
-# prod
-order:
-  id: 10
-  goodsId: 20
-  userId: 30
-  amount: 100.00
-  status: 1
-goods:
-  serviceAddr: goods:50051
